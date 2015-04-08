@@ -4,16 +4,13 @@ column2 = column
 library(shinythemes)
 library(googleCharts)
 
-shinyUI(navbarPage("My Electronic CV", theme = shinytheme('readable'), inverse = TRUE,
-                   tabPanel("Overview Section",
+shinyUI(navbarPage("Using column() with both googleCharts and shiny loaded", 
+                   theme = shinytheme('readable'), 
+                   inverse = TRUE,
+                   tabPanel("Top Section",
                             fluidRow(
-                              column2(width = 4,
-                                     "4"
-                              ),
-                              column2(width = 3, offset = 2,
-                                     "3 offset 2"
-                              )
-                            ) #closing bracket for fluidRow
-                   ) #closing bracket for tabPanel
-) #closing bracket for navbarPage
-) #closing bracket for shinyUI
+                              column2(width = 4,"Width is 4"),
+                              column2(width = 3, offset = 2,"Width is 3, offset is 2")
+                            )
+                   )
+))
